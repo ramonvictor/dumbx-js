@@ -39,9 +39,16 @@ Dispatch actions on user interactions (example):
 
 ```js
 // Dispatching actions
-store.dispatch('pause'); // state.isPlaying => false
+const pauseBtn = document.querySelector('#pause');
+const playBtn = document.querySelector('#play');
 
-store.dispatch('play'); // state.isPlaying => true
+pauseBtn.addEventListener('click', () => {
+	store.dispatch('pause'); // store.getState().isPlaying => false
+});
+
+playBtn.addEventListener('click', () => {
+	store.dispatch('play'); // store.getState().isPlaying => true
+});
 ```
 
 Optionally, unsubscribe whenever component is distroyed:
