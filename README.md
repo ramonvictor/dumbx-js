@@ -1,5 +1,5 @@
 # dumbx-js
-A very dumb way of using some of the Redux principles
+A very dumb way of using some Redux principles
 
 # Usage
 
