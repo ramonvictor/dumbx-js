@@ -23,12 +23,16 @@ class Dumbx {
   }
 
   subscribe(callback) {
+    if (typeof callback != 'function') {
+      throw new Error('Dumbx/subscribe: invalid argument, expected function!');
+    }
+
     this.subscribers.push(callback);
 
     return () => {
       let index = this.subscribers.indexOf(callback);
       this.subscribers.splice(index, 1);
-    };
+    }
   }
 }
 
