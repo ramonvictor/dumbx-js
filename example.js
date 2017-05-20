@@ -2,22 +2,22 @@
 const Dumbx = require('./dumbx');
 
 const store = new Dumbx({
-	state: {
-		isPlaying: false
-	},
-	setters: {
-		pause(state) {
-			state.isPlaying = false;
-		},
-		play(state) {
-			state.isPlaying = true;
-		}
-	}
+  state: {
+    isPlaying: false
+  },
+  setters: {
+    pause(state) {
+      state.isPlaying = false;
+    },
+    play(state) {
+      state.isPlaying = true;
+    }
+  }
 });
 
 // Component render example
 const render = () => {
-	console.log(store.getState().isPlaying);
+  console.log(store.getState().isPlaying);
 };
 
 // Subscribe render returns unsubscribe function
