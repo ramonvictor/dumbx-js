@@ -1,4 +1,4 @@
-const Dumbx = function(store) {
+const Dumbx = function(store = {}) {
 	this.subscribers = [];
 	this.state = store.state || {};
 	this.setters = store.setters || {};
