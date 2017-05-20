@@ -1,11 +1,4 @@
-# dumbx-js
-A very dumb way of using some of the Redux principles
-
-# Usage
-
-First of all, instantiate the store:
-
-```js
+// Usage example
 const Dumbx = require('./dumbx');
 
 const store = new Dumbx({
@@ -21,11 +14,7 @@ const store = new Dumbx({
 		}
 	}
 });
-```
 
-Then, on the UI component, subscribe for store updates:
-
-```js
 // Component render example
 const render = () => {
 	console.log(store.getState().isPlaying);
@@ -33,29 +22,11 @@ const render = () => {
 
 // Subscribe render returns unsubscribe function
 const unsubscribe = store.subscribe(render);
-```
 
-Dispatch actions on user interactions (example):
-
-```js
 // Dispatching actions
 store.dispatch('pause'); // state.isPlaying => false
 
 store.dispatch('play'); // state.isPlaying => true
-```
 
-Optionally, unsubscribe whenever component is distroyed:
-
-```js
-const destroy = () => {
-	unsubscribe();
-};
-```
-
-# Testing locally
-
-Run the example file with:
-
-```
-$ node example.js
-```
+// On component destroy you can unsubscribe
+unsubscribe();
