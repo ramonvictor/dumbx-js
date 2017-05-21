@@ -1,5 +1,5 @@
 # dumbx-js
-A very dumb way of using some Redux principles
+A very dumb way of using some Redux principles.
 
 # Usage
 
@@ -10,7 +10,8 @@ const Dumbx = require('./dumbx');
 
 const store = new Dumbx({
   state: {
-    isPlaying: false
+    isPlaying: false,
+    music: ''
   },
   setters: {
     pause(state) {
