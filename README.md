@@ -18,6 +18,9 @@ const store = new Dumbx({
     },
     play(state) {
       state.isPlaying = true;
+    },
+    selectMusic(state, payload) {
+      state.music = payload.name;
     }
   }
 });
@@ -48,6 +51,12 @@ pauseBtn.addEventListener('click', () => {
 
 playBtn.addEventListener('click', () => {
   store.dispatch('play'); // store.getState().isPlaying => `true`
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  store.dispatch('selectMusic', {
+    name: 'Awesome!'
+  }); // store.getState().music => 'Awesome!'
 });
 ```
 
