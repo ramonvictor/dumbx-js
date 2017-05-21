@@ -1,0 +1,16 @@
+{
+  "name": "dumbx",
+  "author": "@ramonvictor",
+  "description": "A very dumb way of using some Redux principles",
+  "license": "MIT",
+  "version": "1.0.0",
+  "main": "dumbx.js",
+  "homepage": "https://github.com/ramonvictor/dumbx-js/",
+  "repository": "ramonvictor/dumbx-js",
+  "scripts": {
+    "start": "node example.js"
+  },
+  "dependencies": {},
+  "engines": {},
+  "devDependencies": {}
+}
