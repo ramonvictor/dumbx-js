@@ -1,4 +1,6 @@
 # dumbx-js
+[![npm version](https://badge.fury.io/js/dumbx.svg)](https://badge.fury.io/js/dumbx)
+
 A very dumb way of using some Redux principles.
 
 # Usage
